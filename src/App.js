@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactPlayer from 'react-player';
+
+import './App.css'; // Assuming you have a CSS file for styles
 
 function App() {
   return (
     <div className="App">
+         
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="logo">
+          <img src="logo.png" alt="malt.blue logo" />
+        </div>
+        <nav>
+          <ul className="nav-links">
+            <li><a href="/career">Career</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button className="apply-button">Apply Now</button>
       </header>
+      <div className="background-video">
+      <ReactPlayer
+  url="https://github.com/coder-ishan/DemoTesting-mov/raw/main/video.mp4"
+  controls={false}
+  playing
+        loop
+  width="100%"
+  height="100%"
+/>
+
+               
+            </div>
+      <main>
+        {/* Content with images goes here */}
+      </main>
     </div>
   );
 }
